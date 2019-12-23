@@ -1,0 +1,19 @@
+version: "3.4"
+services:
+  watermark:
+    environment:
+      - BASIC_APP=1
+      - TZ=Asia/Shanghai
+    command: celery -A celery_async worker -n watermark -c 8 --loglevel=info -Q watermark
+    restart: on-failure:3
+    image: sonar_watermark
+    env_file: /PATH_TO_SONARX/.env
+    volumes:
+      - /PATH_TO_SONARX/sonarx:/sonarx
+      - /etc/hosts:/etc/hosts
+      - /PATH_TO_SONARX/front:/front
+    logging:
+      driver: syslog
+      options:
+        syslog-address: "udp://SYSLOG_HOST:514"
+        tag: "docker/sonarx-watermark"

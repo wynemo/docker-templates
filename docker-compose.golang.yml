@@ -1,0 +1,13 @@
+version: "3.4"
+services:
+  sonar-proxy:
+    image: golang:alpine
+    restart: always
+    volumes:
+    - ../server:/myapp/server
+    - ./myapp/:/myapp/
+    - ./hosts:/etc/hosts:ro
+    expose:
+    - 7171
+    - 7172
+    command:  /bin/sh -c "cd /myapp/ && exec /myapp/server"

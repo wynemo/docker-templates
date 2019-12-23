@@ -1,0 +1,19 @@
+version: "3.4"
+
+services:
+  elasticsearch:
+    image: elasticsearch:7.3.2
+    restart: always
+    environment:
+      - "discovery.type=single-node"
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    volumes:
+    - /root/es1/:/usr/share/elasticsearch/data/
+    ports:
+      - 9200:9200
+      - 9300:9300
+  kibana:
+    restart: always
+    image: kibana:7.3.2
+    ports:
+      - 5601:5601

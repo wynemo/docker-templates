@@ -1,0 +1,37 @@
+version: "3.4"
+
+x-defaults: &defaults
+  restart: on-failure:3
+  image: MAINIMAGE
+  depends_on:
+  - redis
+  env_file: /PATH_TO_SONARX/.env
+  volumes:
+  - /PATH_TO_SONARX/sonarx:/sonarx
+  - /PATH_TO_SONARX/sonarx/data:/sonarx/data
+  - sock:/tmp/sonar
+  - /etc/hosts:/etc/hosts
+  - /PATH_TO_SONARX/logs:/logs
+  - /PATH_TO_SONARX/front:/front
+services:
+
+  web:
+    <<: *defaults
+    command: uwsgi /sonarx/docker/uwsgi.ini
+    sysctls:
+      net.core.somaxconn: 1024
+    links:
+    - redis
+    - rabbitmq
+    environment:
+    - SERVICE_NAME=web
+    - LOAD_PLUGINS=0
+    logging:
+      driver: syslog
+      options:
+        syslog-address: "udp://SYSLOG_HOST:514"
+        syslog-format: "rfc3164"
+        tag: "docker/sonarx-web"
+
+volumes:
+  sock:

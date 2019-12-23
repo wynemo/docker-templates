@@ -1,0 +1,15 @@
+version: "3.4"
+
+services:
+
+  node:
+    image: "node:12.13.1-alpine"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./socketio-with-express-master/:/app/
+    working_dir: /app
+    ports:
+      - "3000:5999"
+    command: /bin/sh -c "npm install && exec node server.js"
+    restart: always

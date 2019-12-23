@@ -1,0 +1,22 @@
+version: "3.4"
+
+services:
+
+  web:
+    image: lqend_web:latest
+    env_file: /root/lq-end/.env
+    # docker build -f Dockerfile . -t lqend_web:latest
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    command:
+      - /bin/sh
+      - -c
+      - |
+        cd /lq-end/
+        /venv/bin/python app.py
+    volumes:
+    - /root/lq-end/:/lq-end/
+    restart: always
+    ports:
+      - 9999:9999

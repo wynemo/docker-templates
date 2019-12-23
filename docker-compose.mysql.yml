@@ -1,0 +1,17 @@
+version: "3.4"
+
+services:
+  mariadb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: root,./123
+      MYSQL_DATABASE: skillful_hack
+      MYSQL_USER: agent
+      MYSQL_PASSWORD: agent
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --skip-name-resolve
+    restart: always
+    ports:
+      - 3306:3306
+#    volumes:
+#      - "/root/mysql:/var/lib/mysql"
+
