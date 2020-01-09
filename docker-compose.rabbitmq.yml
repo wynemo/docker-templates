@@ -4,10 +4,19 @@ services:
 
   rabbitmq:
     image: "rabbitmq:3-management"
-    hostname: '023_rabbit'
+    hostname: 'rabbitmq'
     restart: always
+    expose:
+     - "15672"
+     - "5672"
     ports:
-     - "15672:15672"
-     - "5672:5672"
+      - "127.0.0.1:15672:15672"
+      - "127.0.0.1:5672:5672"
     volumes:
-      - /root/rabbitmq_data/:/var/lib/rabbitmq/mnesia/
+      - ./rabbitmq_data/:/var/lib/rabbitmq/
+      - ./rabbitmq.sh:/usr/local/bin/rabbitmq.sh
+    ulimits:
+      nofile:
+        soft: 500000
+        hard: 1000000
+    entrypoint: /usr/local/bin/rabbitmq.sh
