@@ -2,6 +2,8 @@ version: "3"
 services:
   registry2:
     # use it in docker/daemon.json/registry-mirrors: http://127.0.0.1:5000
+    # when your machine is behind firewall
+    # this service would act as a local docker mirror service
     image: registry:2
     ports:
       - 5000:5000
