@@ -15,7 +15,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: python3.11-fastapi
+  IMAGE_NAME: wynemo/python3.11_fastapi
   DOCKER_FOLDER: python3.11
   LOCATION: global
 
