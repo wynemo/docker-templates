@@ -56,7 +56,7 @@ pefile==2018.8.8
 pexpect==2.3
 Pillow==2.9.0
 pluggy==0.13.1
-policycoreutils—default-encoding==0.1
+policycoreutils-default-encoding==0.1
 psutil==3.4.2
 py==1.10.0
 pycparser==2.18
