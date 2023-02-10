@@ -54,7 +54,7 @@ packaging==20.8
 pathlib2==2.3.6
 pefile==2018.8.8
 pexpect==2.3
-Pillow==2.9.0
+Pillow==9.3.0
 pluggy==0.13.1
 policycoreutils-default-encoding==0.1
 psutil==3.4.2
