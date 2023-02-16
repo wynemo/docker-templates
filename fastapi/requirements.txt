@@ -16,7 +16,7 @@ click==7.1.1
 click-didyoumean==0.0.3
 click-plugins==1.1.1
 click-repl==0.1.6
-cryptography==2.1.4
+cryptography==39.0.1
 ecdsa==0.14.1
 eight==1.0.1
 fastapi==0.59.0
