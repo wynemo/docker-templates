@@ -63,7 +63,7 @@ pyttk==0.3.2
 pytz==2020.1
 pywinrm==0.4.1
 pyxattr==0.5.1
-redis==2.10.6
+redis==4.5.3
 requests==2.23.0
 requests-ntlm==1.1.0
 s3transfer==0.1.13
