@@ -1,0 +1,12 @@
+docker run -it --rm \
+  --privileged --cap-add=SYS_ADMIN --pid host \
+  -v /sys/kernel/debug:/sys/kernel/debug:rw \
+  -v /lib/modules:/lib/modules:ro \
+  -v /usr/src:/usr/src:ro \
+    -v /etc/localtime:/etc/localtime:ro \
+  --workdir /usr/share/bcc/tools \
+  --network host \
+  bcc bash
+
+in container:
+./exitsnoop
