@@ -1,4 +1,4 @@
-docker run -it --rm \
+sudo docker run -it --rm \
   --privileged --cap-add=SYS_ADMIN --pid host \
   -v /sys/kernel/debug:/sys/kernel/debug:rw \
   -v /lib/modules:/lib/modules:ro \
@@ -6,7 +6,7 @@ docker run -it --rm \
     -v /etc/localtime:/etc/localtime:ro \
   --workdir /usr/share/bcc/tools \
   --network host \
-  bcc bash
+  ghcr.io/wynemo/bcc:master bash
 
 in container:
 ./exitsnoop
