@@ -8,7 +8,7 @@ celery==5.0.5
 fastapi==0.58.1
 gunicorn==20.0.4
 hashring==1.5.1
-httpx==0.16.1
+httpx==0.23.0
 loguru==0.5.3
 #Pillow==8.0.1
 psutil==5.6.7
