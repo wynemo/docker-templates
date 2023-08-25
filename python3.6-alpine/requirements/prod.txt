@@ -46,7 +46,7 @@ urllib3==1.24.2
 uWSGI==2.0.18
 vine==1.2.0
 Werkzeug==0.15.3
-wheel==0.32.2
+wheel==0.38.1
 rsa==4.0
 pycrypto==2.6.1
 pytest==4.3.0
