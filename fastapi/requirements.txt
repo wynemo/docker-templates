@@ -19,7 +19,7 @@ click-repl==0.1.6
 cryptography==2.1.4
 ecdsa==0.14.1
 eight==1.0.1
-fastapi==0.59.0
+fastapi==0.109.1
 future==0.18.2
 gunicorn==20.0.4
 h11==0.9.0
