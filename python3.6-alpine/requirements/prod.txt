@@ -9,7 +9,7 @@ Click==7.0
 dnspython==1.16.0
 elasticsearch>=7.0.0,<8.0.0
 elasticsearch-dsl>=7.0.0,<8.0.0
-eventlet==0.24.1
+eventlet==0.35.2
 Flask==1.0.2
 Flask-Login==0.4.1
 Flask-SocketIO==3.2.1
