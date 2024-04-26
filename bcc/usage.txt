@@ -8,5 +8,8 @@ sudo docker run -it --rm \
   --network host \
   ghcr.io/wynemo/bcc:master bash
 
-in container:
+1. Install the kernel headers on the host system.
+2. Make sure the kernel has the required config options enabled. Please check the kernel config requirements at:
+   https://github.com/iovisor/bcc/blob/master/docs/kernel_config.md
+3. in container:
 ./exitsnoop
