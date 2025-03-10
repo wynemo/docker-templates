@@ -6,7 +6,7 @@ celery==4.2.1
 certifi==2018.11.29
 chardet==3.0.4
 Click==7.0
-dnspython==1.16.0
+dnspython==2.6.1
 elasticsearch>=7.0.0,<8.0.0
 elasticsearch-dsl>=7.0.0,<8.0.0
 eventlet==0.24.1
