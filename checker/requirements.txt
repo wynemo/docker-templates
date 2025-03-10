@@ -33,7 +33,7 @@ iotop==0.6
 ipaddress==1.0.23
 itsdangerous==0.23
 jdcal==1.4.1
-Jinja2==2.10.1
+Jinja2==3.1.3
 jmespath==0.9.3
 kombu==3.0.37
 MarkupSafe==1.1.1
