@@ -14,7 +14,7 @@ loguru==0.5.3
 psutil==5.6.7
 #psycopg2==2.8.6
 pycryptodome==3.9.8
-pydantic==1.6.1
+pydantic==1.10.13
 python-jose==3.1.0
 #python-ldap==3.3.1
 python-multipart==0.0.4
