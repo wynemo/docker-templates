@@ -1,0 +1,24 @@
+# Git
+.git
+.gitignore
+
+# Python
+.python-version
+.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE/Editor
+.vscode/
+
+# Secrets - 避免将包含密钥的文件打包进镜像
+setting.env
+
+# 文档
+*.md
+
+videos/
+static/
+
