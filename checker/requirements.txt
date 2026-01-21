@@ -21,7 +21,7 @@ docutils==0.14
 enum-compat==0.0.2
 enum34==1.1.6
 et-xmlfile==1.0.1
-Flask==0.10.1
+Flask==2.2.5
 future==0.18.2
 futures==3.2.0
 greenlet==0.4.15
