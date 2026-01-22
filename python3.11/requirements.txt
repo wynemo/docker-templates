@@ -6,7 +6,7 @@ async-exit-stack==1.0.1
 async-generator==1.10
 celery==5.0.5
 fastapi==0.58.1
-gunicorn==20.0.4
+gunicorn==22.0.0
 hashring==1.5.1
 httpx==0.16.1
 loguru==0.5.3
